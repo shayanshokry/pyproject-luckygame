@@ -114,6 +114,5 @@ class luckygame1:
   
 rungame = luckygame1()
 rungame.starter()
-   #hello
 
     
