@@ -4,8 +4,8 @@ import random
 class luckygame1:
     def __init__(self):
         self.myChangeBox = 2
-        self.myScoure = 0
-        self.totall_boxes = 0
+        self.myMoney = 0
+        self.total_scores = 0
         self.mojeze = 0
         self.GoldCoin = 0
     
@@ -83,7 +83,7 @@ class luckygame1:
 
     def store(self):
         while True:
-            print("your Score:", self.myScoure,"your chances:", self.myChangeBox)
+            print("your Money:", self.myMoney,"your chances:", self.myChangeBox)
             store = input("30 Scores for 1 chance: \"buy\" exit: \"exit\">>>")
             if store == "buy":
                 if self.myScoure < 30:
@@ -96,7 +96,7 @@ class luckygame1:
 
                 else:
                     self.myChangeBox += 1
-                    self.myScoure -= 30
+                    self.myMoney -= 30
                     print("purchase successful!")
             elif store == "exit":
                 break
@@ -104,12 +104,12 @@ class luckygame1:
         self.luckyGame()
     
     def stats(self):
-        print(f'$$ GoldCoin: {self.GoldCoin}\nsum Score: {self.myScoure}\t\tyour chances: {self.myChangeBox}\ntotal box: {self.totall_boxes}\t\tmojeze: {self.mojeze}')
+        print(f'$$ GoldCoin: {self.GoldCoin}\nsum Score: {self.myMoney}\t\tyour chances: {self.myChangeBox}\ntotal box: {self.totall_boxes}\t\tmojeze: {self.mojeze}')
         print()
         self.starter()
 
     def stats2(self):
-        print(f'$$ GoldCoin: {self.GoldCoin}\nsum Score: {self.myScoure}\t\tyour chances: {self.myChangeBox}\ntotal box: {self.totall_boxes}\t\tmojeze: {self.mojeze}')
+        print(f'$$ GoldCoin: {self.GoldCoin}\nsum Score: {self.myMoney}\t\tyour chances: {self.myChangeBox}\ntotal box: {self.totall_boxes}\t\tmojeze: {self.mojeze}')
         print()
   
 rungame = luckygame1()
